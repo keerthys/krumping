@@ -12,5 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
+    
+    <VideoView
+        android:id="@+id/videoView" 
+        android:layout_width="250dp"
+        android:layout_height="1000dp"/>
 
 </RelativeLayout>

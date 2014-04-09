@@ -1,8 +1,10 @@
 package com.example.krumping;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.Menu;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 public class MainActivity extends Activity {
 
@@ -10,6 +12,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        VideoView videoView = (VideoView) findViewById(R.id.videoView);
+        videoView.setVideoPath("rtsp:// 192.168.1.7:8554/");
+        videoView.setMediaController(new MediaController(this));
     }
 
     @Override
